@@ -13,7 +13,7 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        const { useState } = React;
+        const { useState, useEffect } = React;
 
         function CrosswordBuilder() {
           const [gridSize, setGridSize] = useState({ rows: 10, cols: 10 });
@@ -24,6 +24,7 @@
           );
           const [clues, setClues] = useState({ across: {}, down: {} });
           const [selectedCell, setSelectedCell] = useState(null);
+          const [direction, setDirection] = useState('across'); // 'across' or 'down'
           const [draggedLetter, setDraggedLetter] = useState(null);
           const [showClueEditor, setShowClueEditor] = useState(false);
           const [showWordFinder, setShowWordFinder] = useState(false);
@@ -36,6 +37,16 @@
 
           const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
+          // Auto-focus selected cell
+          useEffect(() => {
+            if (selectedCell) {
+              const cellElement = document.querySelector(`[data-cell="${selectedCell.row}-${selectedCell.col}"]`);
+              if (cellElement) {
+                cellElement.focus();
+              }
+            }
+          }, [selectedCell]);
+
           const updateCell = (row, col, updates) => {
             setGrid(prev => {
               const newGrid = prev.map(r => r.map(c => ({ ...c })));
@@ -45,7 +56,14 @@
           };
 
           const handleCellClick = (row, col) => {
-            setSelectedCell({ row, col });
+            if (selectedCell?.row === row && selectedCell?.col === col) {
+              // Toggle direction if clicking the same cell
+              setDirection(prev => prev === 'across' ? 'down' : 'across');
+            } else {
+              // New cell selected, default to across
+              setSelectedCell({ row, col });
+              setDirection('across');
+            }
           };
 
           const handleCellKeyDown = (e, row, col) => {
@@ -55,17 +73,142 @@
             } else if (e.key.length === 1 && /[a-zA-Z]/.test(e.key)) {
               e.preventDefault();
               updateCell(row, col, { letter: e.key.toUpperCase(), isBlack: false });
+              // Move to next cell in current direction
+              moveToNextCell(row, col, direction);
             } else if (e.key === 'Backspace' || e.key === 'Delete') {
               e.preventDefault();
-              updateCell(row, col, { letter: '', isBlack: false });
-            } else if (e.key === 'ArrowRight' && col < gridSize.cols - 1) {
-              setSelectedCell({ row, col: col + 1 });
-            } else if (e.key === 'ArrowLeft' && col > 0) {
-              setSelectedCell({ row, col: col - 1 });
-            } else if (e.key === 'ArrowDown' && row < gridSize.rows - 1) {
-              setSelectedCell({ row: row + 1, col });
-            } else if (e.key === 'ArrowUp' && row > 0) {
-              setSelectedCell({ row: row - 1, col });
+              if (grid[row][col].letter) {
+                // If there's a letter, just delete it
+                updateCell(row, col, { letter: '' });
+              } else {
+                // If cell is empty, delete and move to previous cell
+                moveToPreviousCell(row, col, direction);
+              }
+            } else if (e.key === 'ArrowRight') {
+              e.preventDefault();
+              if (col < gridSize.cols - 1) {
+                setSelectedCell({ row, col: col + 1 });
+                setDirection('across');
+              }
+            } else if (e.key === 'ArrowLeft') {
+              e.preventDefault();
+              if (col > 0) {
+                setSelectedCell({ row, col: col - 1 });
+                setDirection('across');
+              }
+            } else if (e.key === 'ArrowDown') {
+              e.preventDefault();
+              if (row < gridSize.rows - 1) {
+                setSelectedCell({ row: row + 1, col });
+                setDirection('down');
+              }
+            } else if (e.key === 'ArrowUp') {
+              e.preventDefault();
+              if (row > 0) {
+                setSelectedCell({ row: row - 1, col });
+                setDirection('down');
+              }
+            } else if (e.key === 'Tab') {
+              e.preventDefault();
+              // Tab moves to next cell in current direction
+              moveToNextCell(row, col, direction);
+            }
+          };
+
+          const moveToNextCell = (row, col, dir) => {
+            if (dir === 'across') {
+              // Move right, skip black cells
+              let nextCol = col + 1;
+              while (nextCol < gridSize.cols && grid[row][nextCol].isBlack) {
+                nextCol++;
+              }
+              if (nextCol < gridSize.cols) {
+                setSelectedCell({ row, col: nextCol });
+              } else {
+                // Wrap to next row
+                let nextRow = row + 1;
+                if (nextRow < gridSize.rows) {
+                  let newCol = 0;
+                  while (newCol < gridSize.cols && grid[nextRow][newCol].isBlack) {
+                    newCol++;
+                  }
+                  if (newCol < gridSize.cols) {
+                    setSelectedCell({ row: nextRow, col: newCol });
+                  }
+                }
+              }
+            } else {
+              // Move down, skip black cells
+              let nextRow = row + 1;
+              while (nextRow < gridSize.rows && grid[nextRow][col].isBlack) {
+                nextRow++;
+              }
+              if (nextRow < gridSize.rows) {
+                setSelectedCell({ row: nextRow, col });
+              } else {
+                // Wrap to next column
+                let nextCol = col + 1;
+                if (nextCol < gridSize.cols) {
+                  let newRow = 0;
+                  while (newRow < gridSize.rows && grid[newRow][nextCol].isBlack) {
+                    newRow++;
+                  }
+                  if (newRow < gridSize.rows) {
+                    setSelectedCell({ row: newRow, col: nextCol });
+                  }
+                }
+              }
+            }
+          };
+
+          const moveToPreviousCell = (row, col, dir) => {
+            if (dir === 'across') {
+              // Move left, skip black cells
+              let prevCol = col - 1;
+              while (prevCol >= 0 && grid[row][prevCol].isBlack) {
+                prevCol--;
+              }
+              if (prevCol >= 0) {
+                setSelectedCell({ row, col: prevCol });
+                // Delete the letter in the previous cell
+                updateCell(row, prevCol, { letter: '' });
+              } else {
+                // Wrap to previous row
+                let prevRow = row - 1;
+                if (prevRow >= 0) {
+                  let newCol = gridSize.cols - 1;
+                  while (newCol >= 0 && grid[prevRow][newCol].isBlack) {
+                    newCol--;
+                  }
+                  if (newCol >= 0) {
+                    setSelectedCell({ row: prevRow, col: newCol });
+                    updateCell(prevRow, newCol, { letter: '' });
+                  }
+                }
+              }
+            } else {
+              // Move up, skip black cells
+              let prevRow = row - 1;
+              while (prevRow >= 0 && grid[prevRow][col].isBlack) {
+                prevRow--;
+              }
+              if (prevRow >= 0) {
+                setSelectedCell({ row: prevRow, col });
+                updateCell(prevRow, col, { letter: '' });
+              } else {
+                // Wrap to previous column
+                let prevCol = col - 1;
+                if (prevCol >= 0) {
+                  let newRow = gridSize.rows - 1;
+                  while (newRow >= 0 && grid[newRow][prevCol].isBlack) {
+                    newRow--;
+                  }
+                  if (newRow >= 0) {
+                    setSelectedCell({ row: newRow, col: prevCol });
+                    updateCell(newRow, prevCol, { letter: '' });
+                  }
+                }
+              }
             }
           };
 
@@ -605,38 +748,48 @@
 
                   <div className="text-sm text-gray-600 mb-4">
                     Click a cell to select, type a letter, or press Space to toggle black cells. Use arrow keys to navigate.
+                    <br />
+                    <span className="font-semibold">Current direction: {direction === 'across' ? '→ Across' : '↓ Down'}</span> (Click selected cell again to toggle)
                   </div>
 
                   {/* Crossword Grid */}
                   <div className="inline-block border-4 border-gray-800 mb-6">
                     {grid.map((row, rowIndex) => (
                       <div key={rowIndex} className="flex">
-                        {row.map((cell, colIndex) => (
-                          <div
-                            key={colIndex}
-                            className={`w-12 h-12 border border-gray-400 relative cursor-pointer
-                              ${cell.isBlack ? 'bg-gray-900' : 'bg-white'}
-                              ${selectedCell?.row === rowIndex && selectedCell?.col === colIndex 
-                                ? 'ring-2 ring-blue-500 ring-inset' 
-                                : ''}`}
-                            onClick={() => handleCellClick(rowIndex, colIndex)}
-                            onKeyDown={(e) => handleCellKeyDown(e, rowIndex, colIndex)}
-                            onDragOver={handleDragOver}
-                            onDrop={(e) => handleDrop(e, rowIndex, colIndex)}
-                            tabIndex={0}
-                          >
-                            {cell.number && !cell.isBlack && (
-                              <span className="absolute top-0.5 left-0.5 text-xs font-bold text-gray-700">
-                                {cell.number}
-                              </span>
-                            )}
-                            {!cell.isBlack && (
-                              <div className="w-full h-full flex items-center justify-center text-2xl font-bold text-gray-800">
-                                {cell.letter}
-                              </div>
-                            )}
-                          </div>
-                        ))}
+                        {row.map((cell, colIndex) => {
+                          const isSelected = selectedCell?.row === rowIndex && selectedCell?.col === colIndex;
+                          const isInWord = selectedCell && (
+                            (direction === 'across' && selectedCell.row === rowIndex && !cell.isBlack) ||
+                            (direction === 'down' && selectedCell.col === colIndex && !cell.isBlack)
+                          );
+                          
+                          return (
+                            <div
+                              key={colIndex}
+                              data-cell={`${rowIndex}-${colIndex}`}
+                              className={`w-12 h-12 border border-gray-400 relative cursor-pointer
+                                ${cell.isBlack ? 'bg-gray-900' : 'bg-white'}
+                                ${isSelected ? 'ring-2 ring-blue-600 ring-inset z-10' : ''}
+                                ${isInWord && !isSelected ? 'bg-blue-100' : ''}`}
+                              onClick={() => handleCellClick(rowIndex, colIndex)}
+                              onKeyDown={(e) => handleCellKeyDown(e, rowIndex, colIndex)}
+                              onDragOver={handleDragOver}
+                              onDrop={(e) => handleDrop(e, rowIndex, colIndex)}
+                              tabIndex={0}
+                            >
+                              {cell.number && !cell.isBlack && (
+                                <span className="absolute top-0.5 left-0.5 text-xs font-bold text-gray-700">
+                                  {cell.number}
+                                </span>
+                              )}
+                              {!cell.isBlack && (
+                                <div className="w-full h-full flex items-center justify-center text-2xl font-bold text-gray-800">
+                                  {cell.letter}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                     ))}
                   </div>
