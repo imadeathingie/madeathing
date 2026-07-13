@@ -1,30 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#F7F2E7"/>
-  <g stroke="#2B2620" stroke-width="2" fill="none">
-    <rect x="110" y="60" width="180" height="180" />
-    <line x1="110" y1="100" x2="290" y2="100" />
-    <line x1="110" y1="140" x2="290" y2="140" />
-    <line x1="110" y1="180" x2="290" y2="180" />
-    <line x1="150" y1="60" x2="150" y2="240" />
-    <line x1="190" y1="60" x2="190" y2="240" />
-    <line x1="230" y1="60" x2="230" y2="240" />
-    <line x1="270" y1="60" x2="270" y2="240" />
-  </g>
-  <g fill="#2B2620">
-    <rect x="150" y="100" width="40" height="40" />
-    <rect x="230" y="140" width="40" height="40" />
-    <rect x="110" y="180" width="40" height="40" />
-    <rect x="270" y="60" width="20" height="40" />
-  </g>
-  <g fill="#B98B3E" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="bold">
-    <text x="118" y="90">U</text>
-    <text x="158" y="90">T</text>
-    <text x="198" y="90">E</text>
-    <text x="238" y="130">A</text>
-    <text x="278" y="130">N</text>
-  </g>
-  <g stroke="#E85D2C" stroke-width="2.5" stroke-linecap="round">
-    <path d="M112 250 h60" />
-    <path d="M112 262 h40" />
-  </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <rect x="0" y="0" width="400" height="300" style="fill:rgb(247,242,231);"/>
+    <g>
+        <g transform="matrix(1,0,0,1,278,130)">
+            <text x="0px" y="0px" style="font-family:'Menlo-Bold', 'Menlo', monospace;font-weight:700;font-size:26px;fill:rgb(185,139,62);">N</text>
+        </g>
+        <g transform="matrix(1,0,0,1,118,90)">
+            <g transform="matrix(26,0,0,26,15.6533,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Menlo-Bold', 'Menlo', monospace;font-weight:700;font-size:26px;fill:rgb(185,139,62);">E</text>
+        </g>
+        <g transform="matrix(1,0,0,1,158,90)">
+            <g transform="matrix(26,0,0,26,15.6533,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Menlo-Bold', 'Menlo', monospace;font-weight:700;font-size:26px;fill:rgb(185,139,62);">V</text>
+        </g>
+        <g transform="matrix(1,0,0,1,201.775,90)">
+            <g transform="matrix(26,0,0,26,15.6533,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Menlo-Bold', 'Menlo', monospace;font-weight:700;font-size:26px;fill:rgb(185,139,62);">E</text>
+        </g>
+        <g transform="matrix(1,0,0,1,239.892,90)">
+            <g transform="matrix(26,0,0,26,15.6533,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Menlo-Bold', 'Menlo', monospace;font-weight:700;font-size:26px;fill:rgb(185,139,62);">N</text>
+        </g>
+        <g transform="matrix(1,0,0,1,202.219,130)">
+            <g transform="matrix(26,0,0,26,15.6533,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Menlo-Bold', 'Menlo', monospace;font-weight:700;font-size:26px;fill:rgb(185,139,62);">D</text>
+        </g>
+        <g transform="matrix(1,0,0,1,238,130)">
+            <text x="0px" y="0px" style="font-family:'Menlo-Bold', 'Menlo', monospace;font-weight:700;font-size:26px;fill:rgb(185,139,62);">A</text>
+        </g>
+    </g>
+    <g>
+        <path d="M110,100L290,100" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        <path d="M110,140L290,140" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        <path d="M110,180L290,180" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,0,39.1334)">
+            <path d="M110,180L290,180" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        </g>
+        <path d="M150,60L150,240" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        <path d="M190,60L190,240" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        <path d="M230,60L230,240" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        <path d="M270,60L270,240" style="fill:none;fill-rule:nonzero;stroke:rgb(43,38,32);stroke-width:2px;"/>
+        <path d="M292,242L108,242L108,58L292,58L292,242ZM290,60L110,60L110,240L290,240L290,60Z" style="fill:rgb(43,38,32);"/>
+    </g>
+    <g>
+        <rect x="150" y="100" width="40" height="40" style="fill:rgb(43,38,32);"/>
+        <rect x="230" y="140" width="40" height="40" style="fill:rgb(43,38,32);"/>
+        <rect x="110" y="180" width="40" height="40" style="fill:rgb(43,38,32);"/>
+        <rect x="270" y="60" width="20" height="40" style="fill:rgb(43,38,32);"/>
+    </g>
+    <g>
+        <path d="M112,250L172,250" style="fill:none;fill-rule:nonzero;stroke:rgb(232,93,44);stroke-width:2.5px;stroke-linecap:round;"/>
+        <path d="M112,262L152,262" style="fill:none;fill-rule:nonzero;stroke:rgb(232,93,44);stroke-width:2.5px;stroke-linecap:round;"/>
+    </g>
 </svg>
