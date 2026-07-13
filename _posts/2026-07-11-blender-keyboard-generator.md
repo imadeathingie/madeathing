@@ -6,6 +6,7 @@ date: 2026-07-11
 tags: [keyboards, 3d-printing, blender, python, openscad]
 image: /assets/images/staggered-lattice.png
 excerpt: "A Blender add-on that turns a handful of algebraic expressions into a fully 3D-printable keyboard case."
+github: "https://github.com/imadeathingie/BlenderKeyboardGenerator"
 ---
 
 I've been building a generator for 3D-printable mechanical keyboard cases. You describe the board as JSON — a grid of keys, some algebraic expressions for how those keys are laid out in space, and a set of options for walls, skirts, baseplates, and threaded inserts — and it produces a watertight mesh you can slice and print.
