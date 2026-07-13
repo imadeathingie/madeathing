@@ -1,0 +1,20 @@
+{% assign p = include.post %}
+{% assign meta = site.categories_meta[p.category] %}
+<article class="project-card" data-category="{{ p.category }}">
+  {% if p.image %}
+  <div class="card-thumb">
+    <img src="{{ p.image | relative_url }}" alt="" loading="lazy">
+  </div>
+  {% endif %}
+  <div class="card-body">
+    {% if meta %}
+    <span class="card-badge" style="background: {{ meta.color }};">{{ meta.label }}</span>
+    {% endif %}
+    <h3 class="card-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    <p class="card-excerpt">{{ p.excerpt | strip_html | truncate: 110 }}</p>
+    <div class="card-meta">
+      <span>{{ p.date | date: "%b %d, %Y" }}</span>
+      {% if p.tags.size > 0 %}<span>#{{ p.tags | first }}</span>{% endif %}
+    </div>
+  </div>
+</article>

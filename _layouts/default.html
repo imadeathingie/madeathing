@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/filter.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/copy-code.js' | relative_url }}" defer></script>
+
+  {%- comment -%}
+    Per-post script loading. Set in a post's front matter:
+
+      custom_scripts:
+        - /assets/js/crossword-player.js
+
+    Entries can also be a hash for more control:
+
+      custom_scripts:
+        - src: /assets/js/some-module.js
+          type: module
+          defer: false
+  {%- endcomment -%}
+  {% if page.custom_scripts %}
+    {% for script in page.custom_scripts %}
+      {% if script.src %}
+        <script src="{{ script.src | relative_url }}"
+                type="{{ script.type | default: 'text/javascript' }}"
+                {% unless script.defer == false %}defer{% endunless %}></script>
+      {% else %}
+        <script src="{{ script | relative_url }}" defer></script>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</body>
+</html>

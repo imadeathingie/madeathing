@@ -1,0 +1,25 @@
+{% assign puzzle_id = include.src | slugify %}
+<div class="crossword" id="crossword-{{ puzzle_id }}" data-src="{{ include.src | relative_url }}">
+  <div class="crossword-toolbar">
+    <button type="button" data-action="check">check answers</button>
+    <button type="button" data-action="reveal">reveal answers</button>
+    <button type="button" data-action="clear">clear grid</button>
+  </div>
+  <div class="crossword-body">
+    <div class="crossword-grid-wrap">
+      <div class="crossword-grid" data-role="grid">
+        <p class="crossword-loading">loading puzzle&hellip;</p>
+      </div>
+    </div>
+    <div class="crossword-clues">
+      <div class="crossword-clue-col">
+        <h3>Across</h3>
+        <div data-role="across-clues"></div>
+      </div>
+      <div class="crossword-clue-col">
+        <h3>Down</h3>
+        <div data-role="down-clues"></div>
+      </div>
+    </div>
+  </div>
+</div>

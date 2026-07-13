@@ -1,0 +1,19 @@
+{% assign viewer_id = include.src | slugify %}
+<div class="stl-viewer">
+  <div class="stl-viewer-canvas"
+       id="stl-{{ viewer_id }}"
+       style="--stl-height: {{ include.height | default: 420 }}px;"
+       data-src="{{ include.src | relative_url }}"
+       data-color="{{ include.color | default: '#B98B3E' }}">
+    <p class="stl-viewer-loading">loading model&hellip;</p>
+  </div>
+  <div class="stl-viewer-toolbar">
+    <button type="button" data-action="heatmap" class="is-active">heatmap</button>
+    <button type="button" data-action="edges" class="is-active">edges</button>
+    <button type="button" data-action="wireframe">wireframe</button>
+    <button type="button" data-action="rotate">auto-rotate</button>
+    <button type="button" data-action="reset">reset view</button>
+  </div>
+  <p class="stl-viewer-hint">drag to rotate &middot; scroll to zoom{% if include.caption %} &middot; {{ include.caption }}{% endif %}</p>
+</div>
+<script type="module" src="{{ '/assets/js/stl-viewer.js' | relative_url }}"></script>
