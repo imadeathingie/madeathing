@@ -10,7 +10,7 @@ baseurl: ""
 # "https://yourusername.github.io" (user site) or
 # "https://yourusername.github.io/your-repo" (project site).
 # jekyll-feed and jekyll-seo-tag use it to generate correct absolute URLs.
-url: "https://imadeathingie.github.io/madeathing"
+url: "https://i.madeathing.ie"
 
 author: Thomas Hazlett
 email: i@madeathing.ie
@@ -28,8 +28,8 @@ categories_meta:
   cad:
     label: "CAD"
     color: "#338040"
-  crossword:
-    label: "Crossword"
+  coffee:
+    label: "Coffee"
     color: "#3D3D3D"
 
 markdown: kramdown
