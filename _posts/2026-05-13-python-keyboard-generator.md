@@ -6,6 +6,7 @@ category: cad
 image: /assets/images/python-keyboard-generator.svg
 tags: [openscad, python, keyboards, generative-design]
 excerpt: "A config file and a handful of algebraic expressions turn into a fully parametric keyboard case."
+github: "https://github.com/imadeathingie/PythonKeyboardGenerator"
 ---
 
 Hand-placing every key on a keyboard case gets old fast, especially once
