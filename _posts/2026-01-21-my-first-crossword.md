@@ -1,7 +1,7 @@
 ---
 title: "My First Crossword"
 category: crossword
-tags: [javascript, react, puzzle]
+tags: [puzzle]
 image: /assets/images/my-first-crossword.svg
 excerpt: "A drag-and-drop crossword builder with a dictionary word finder, plus a playable puzzle embedded right in this post."
 custom_scripts:
