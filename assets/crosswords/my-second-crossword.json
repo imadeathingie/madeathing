@@ -1,0 +1,1216 @@
+{
+    "gridSize": {
+        "rows": 15,
+        "cols": 15
+    },
+    "grid": [
+        [
+            {
+                "letter": "H",
+                "isBlack": false,
+                "number": 1
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "B",
+                "isBlack": false,
+                "number": 2
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": 3
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": 4
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": 5
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": 6
+            },
+            {
+                "letter": "Y",
+                "isBlack": false,
+                "number": 7
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": 8
+            },
+            {
+                "letter": "W",
+                "isBlack": false,
+                "number": 9
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": 10
+            }
+        ],
+        [
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": 11
+            },
+            {
+                "letter": "M",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": 12
+            },
+            {
+                "letter": "X",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": 13
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": 14
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": 15
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "P",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": 16
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "P",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": 17
+            },
+            {
+                "letter": "U",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": 18
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": 19
+            },
+            {
+                "letter": "V",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "L",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "Y",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "C",
+                "isBlack": false,
+                "number": 20
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": 21
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "C",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "L",
+                "isBlack": false,
+                "number": 22
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "V",
+                "isBlack": false,
+                "number": 23
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "L",
+                "isBlack": false,
+                "number": 24
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "C",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "H",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": 25
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": 26
+            },
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": 27
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "Y",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": 28
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": 29
+            },
+            {
+                "letter": "V",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "V",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": 30
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "B",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "B",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": 31
+            },
+            {
+                "letter": "D",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "U",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "H",
+                "isBlack": false,
+                "number": 32
+            },
+            {
+                "letter": "Y",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "P",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": 33
+            },
+            {
+                "letter": "G",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "G",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": 34
+            },
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "V",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "P",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "G",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "X",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "B",
+                "isBlack": false,
+                "number": 35
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "D",
+                "isBlack": false,
+                "number": 36
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": 37
+            },
+            {
+                "letter": "R",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "C",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": 38
+            },
+            {
+                "letter": "L",
+                "isBlack": false,
+                "number": 39
+            },
+            {
+                "letter": "L",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "Y",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "C",
+                "isBlack": false,
+                "number": 40
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "D",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "U",
+                "isBlack": false,
+                "number": 41
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "C",
+                "isBlack": false,
+                "number": 42
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "D",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "I",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "D",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "O",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "U",
+                "isBlack": false,
+                "number": 43
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "K",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "P",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "T",
+                "isBlack": false,
+                "number": null
+            }
+        ],
+        [
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "L",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "Y",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "A",
+                "isBlack": false,
+                "number": 44
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "N",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "U",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "S",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            },
+            {
+                "letter": "E",
+                "isBlack": false,
+                "number": null
+            },
+            {
+                "letter": "",
+                "isBlack": true,
+                "number": null
+            }
+        ]
+    ],
+    "clues": {
+        "across": {
+            "1": "Usual surroundings (7)",
+            "6": "Land revenue system, dealing directly with the cultivator (7)",
+            "11": "Typeface unit of measurement (2)",
+            "12": "Worthy of Greek descent (5)",
+            "14": "Popular type of ferry (2,2) ALSO 6 DOWN",
+            "15": "Cut, gather (4)",
+            "16": "Made a mistake (4)",
+            "17": "Analysing nourishment, adv. (11)",
+            "20": "First to kill (4)",
+            "22": "On or to the left (4)",
+            "24": "Someone from a doubly landlocked, European country (15)",
+            "28": "Shows exceptional aptitude in a field (6)",
+            "30": "Has a bill or beak (6)",
+            "32": "Extremely violent or forceful (15)",
+            "35": "Duplex (15)",
+            "40": "Disadvantage (3)",
+            "41": "Greek name for the Egyptian goddess, Wadjet (3)",
+            "42": "Straightforward answer (6)",
+            "43": "Neglected, not tidy (6)",
+            "44": "Roman unit of time (5)"
+        },
+        "down": {
+            "1": "Greek hero (8)",
+            "2": "Type of hat (6)",
+            "3": "Surface that lacks spots, dots, punctures, or pores (10)",
+            "4": "Hawaiian basaltic lava (2)",
+            "5": "Transfer (2)",
+            "6": "Popular type of ferry (2,2) ALSO 14 ACROSS",
+            "7": "Popular role playing game series in Japan (2)",
+            "8": "Tired tram (10)",
+            "9": "Species of crested gibbon (6)",
+            "10": "Brought back (8)",
+            "13": "Connected devices, sensors, and network-enabled systems (3)",
+            "18": "Causing heat in America (3)",
+            "19": "Popular operating system (3)",
+            "21": "Smart machines (2)",
+            "23": "8th May (2)",
+            "25": "Rubbish (3)",
+            "26": "Act of following a route (10)",
+            "27": "Informally money (3)",
+            "29": "Not representative of a group (8)",
+            "31": "Surround (8)",
+            "33": "Underlying intentions (6)",
+            "34": "Depart en masse (6)",
+            "36": "Put on (3)",
+            "37": "Turning left at high speed (4)",
+            "38": "Guillemots, puffins etc. (4)",
+            "39": "Between 4G and 5G (3)"
+        }
+    },
+    "version": "1.0"
+}
