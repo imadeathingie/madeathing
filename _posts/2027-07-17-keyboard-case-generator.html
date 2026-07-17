@@ -6,6 +6,10 @@ date: 2026-07-17
 tags: [keyboards, 3d-printing, javascript, ai]
 image: /assets/images/ts-keyboardgen.png
 excerpt: "An LLM port of my Blender plugin, usable in your browser."
+custom_scripts:
+  - src: /assets/js/keyboard.js
+    type: module
+    defer: false
 ---
 
   <div id="app">
@@ -66,5 +70,3 @@ excerpt: "An LLM port of my Blender plugin, usable in your browser."
       <div id="status" aria-live="polite"></div>
     </div>
   </div>
-
-    <script type="module" crossorigin src="{{ '/assets/js/keyboard.js' | relative_url }}"></script>
