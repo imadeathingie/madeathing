@@ -3,7 +3,7 @@ layout: post
 title: "Python Keyboard Generator"
 date: 2026-05-13
 category: cad
-image: /assets/images/python-keyboard-generator.svg
+image: /assets/images/staggered-lattice.png
 tags: [openscad, python, keyboards, generative-design]
 excerpt: "A config file and a handful of algebraic expressions turn into a fully parametric keyboard case."
 github: "https://github.com/imadeathingie/PythonKeyboardGenerator"
