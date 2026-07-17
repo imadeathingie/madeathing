@@ -15,11 +15,30 @@
   --brass:            #B98B3E;  /* secondary accent — hardware, "Code" tag */
   --line:             rgba(43, 38, 32, 0.14);
 
+
+  --bg: var(--kraft);
+    --surface: var(--paper);
+    --surface-2: var(--paper);
+    --border: var(--brass);
+
+    --text: var(--ink);
+    --muted: var(--pencil);
+
+    --primary: var(--safety-orange);
+    --primary-hover: #E85D2Ccc;
+    --primary-text: var(--ink);
+
+    --danger: #dc2626;
+
+    --radius: 8px;
+
+
   /* -- type ------------------------------------------------------------ */
   --font-display: 'Staatliches', sans-serif;
   --font-body:    'Karla', sans-serif;
   --font-mono:    'IBM Plex Mono', monospace;
 
+  --font-ui: 'Staatliches', sans-serif;
   --radius: 3px;
 }
 
@@ -918,4 +937,344 @@ img { max-width: 100%; display: block; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+
+#app {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header header" "sidebar viewport";
+    height: 100%
+}
+
+.logo-key {
+    align-self: center;
+    width: 26px;
+    height: 26px;
+    border: 1.5px solid var(--amber);
+    border-radius: 5px;
+    box-shadow: inset 0 -3px #f0b54259;
+    display: grid;
+    place-items: center;
+    color: var(--amber);
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600
+}
+
+aside {
+    grid-area: sidebar;
+    /* border-right: 1px solid var(--line); */
+    /* background: var(--surface); */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px;
+    overflow-y: auto;
+    min-height: 0
+}
+
+.field-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+
+.row {
+    display: flex;
+    gap: 8px
+}
+
+.row>* {
+    flex: 1
+}
+
+select,
+button,
+textarea {
+    font: inherit;
+    color: var(--text);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius)
+}
+
+select {
+    padding: 7px 8px;
+    width: 100%
+}
+
+button {
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: border-color .12s ease, background .12s ease
+}
+
+button:hover {
+    border-color: var(--muted)
+}
+
+button.primary {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: var(--amber-ink);
+    font-weight: 600
+}
+
+button.primary:hover {
+    background: #f6c464
+}
+
+select:focus-visible,
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 1px
+}
+
+#editor {
+    width: 100%;
+    min-height: 220px;
+    flex: 1;
+    resize: vertical;
+    padding: 10px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.5;
+    tab-size: 2;
+    white-space: pre;
+}
+
+.hint {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin: 4px 0 0
+}
+
+#error-box {
+    background: #e26d5a1f;
+    border: 1px solid rgba(226, 109, 90, .5);
+    border-radius: var(--radius);
+    color: #f0a89c;
+    padding: 8px 10px;
+    font-size: 12.5px;
+    font-family: var(--font-mono);
+    white-space: pre-wrap;
+    word-break: break-word
+}
+
+#error-box[hidden] {
+    display: none
+}
+
+#parts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.part-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-2);
+    cursor: pointer;
+    user-select: none
+}
+
+.part-toggle:hover {
+    border-color: var(--muted)
+}
+
+.part-toggle input {
+    accent-color: var(--amber)
+}
+
+.swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, .4);
+    flex: none
+}
+
+#viewport-wrap {
+    grid-area: viewport;
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    margin-top: 1rem;
+}
+
+#viewport {
+    position: absolute;
+    inset: 0
+}
+
+#viewport-toolbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 2
+}
+
+#viewport-toolbar select,
+#viewport-toolbar button {
+    background: var(--paper);
+    backdrop-filter: blur(4px)
+}
+
+#status {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--muted);
+    background: #15181de0;
+    border-top: 1px solid var(--line);
+    z-index: 2
+}
+
+#status span {
+    padding: 6px 14px;
+    border-right: 1px solid var(--line);
+    white-space: nowrap
+}
+
+#status span:last-child {
+    color: var(--amber)
+}
+
+#status.bad span:nth-last-child(1),
+#status.bad span:nth-last-child(2) {
+    color: var(--bad)
+}
+
+@media (max-width: 860px) {
+    #app {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto minmax(320px, 55vh);
+        grid-template-areas: "header" "sidebar" "viewport";
+        height: auto;
+        min-height: 100%
+    }
+
+    aside {
+        border-right: none;
+        border-bottom: 1px solid var(--line)
+    }
+
+    #editor {
+        min-height: 160px
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important
+    }
+}
+/* 
+header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+} */
+
+/* h1 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+} */
+
+.tagline {
+    color: var(--muted);
+}
+
+aside {
+    /* background: white; */
+    /* border-right: 1px solid var(--border); */
+    padding: 20px;
+}
+
+button {
+    /* background: white; */
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    transition: 0.15s;
+}
+
+button:hover {
+    border-color: var(--primary);
+}
+
+button.primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+button.primary:hover {
+    background: var(--primary-hover);
+}
+
+select,
+textarea {
+    background: white;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+.field-label {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--muted);
+}
+
+#status {
+    /* background: white; */
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-ui);
+}
+
+.logo-key {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
 }
