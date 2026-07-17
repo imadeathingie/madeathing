@@ -4,6 +4,11 @@
    ========================================================================== */
 
 :root {
+  --code:     #B98B3E;
+  --print:    #663399;
+  --cad:      #338040;
+  --coffee:   #3D3D3D;
+
   /* -- palette ------------------------------------------------------- */
   --pegboard:        #5B7065;  /* muted workshop-pegboard green */
   --pegboard-dark:    #3F5147;
@@ -197,6 +202,35 @@ img { max-width: 100%; display: block; }
   background: var(--safety-orange);
   color: var(--paper);
   border-color: var(--safety-orange);
+}
+.filter-tab.btn-code.is-active {
+  background: var(--code);
+  border-color: var(--code);
+}
+.filter-tab.btn-cad.is-active {
+  background: var(--cad);
+  border-color: var(--cad);
+}
+.filter-tab.btn-coffee.is-active {
+  background: var(--coffee);
+  border-color: var(--coffee);
+}
+.filter-tab.btn-print.is-active {
+  background: var(--print);
+  border-color: var(--print);
+}
+
+.filter-tab.btn-code:hover {
+  border-color: var(--code);
+}
+.filter-tab.btn-cad:hover {
+  border-color: var(--cad);
+}
+.filter-tab.btn-coffee:hover {
+  border-color: var(--coffee);
+}
+.filter-tab.btn-print:hover {
+  border-color: var(--print);
 }
 
 /* ==========================================================================

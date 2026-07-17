@@ -14,7 +14,7 @@ layout: default
     {% for cat in site.categories_meta %}
       {% assign key = cat[0] %}
       {% assign meta = cat[1] %}
-      <button class="filter-tab" data-filter="{{ key }}">{{ meta.label }}</button>
+      <button class="filter-tab btn-{{key}}" data-filter="{{ key }}">{{ meta.label }}</button>
     {% endfor %}
   </div>
 
