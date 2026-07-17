@@ -4,7 +4,7 @@ title: "Blender Keyboard Generator"
 category: cad
 date: 2026-07-11
 tags: [keyboards, 3d-printing, blender, python, openscad]
-image: /assets/images/staggered-lattice.png
+image: /assets/images/blender-keyboardgen.png
 excerpt: "A Blender add-on that turns a handful of algebraic expressions into a fully 3D-printable keyboard case."
 github: "https://github.com/imadeathingie/BlenderKeyboardGenerator"
 ---
