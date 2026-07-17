@@ -3,7 +3,7 @@ title: "My First Crossword"
 category: coffee
 tags: [puzzle]
 image: /assets/images/my-first-crossword.svg
-excerpt: "A drag-and-drop crossword builder with a dictionary word finder, plus a playable puzzle embedded right in this post."
+excerpt: "My first playable crossword."
 custom_scripts:
   - /assets/js/crossword-player.js
 ---
@@ -42,6 +42,6 @@ that works on any page).
 ## What's next
 
 The builder itself is a page on this site — [try the crossword
-builder]({{ '/crossword/' | relative_url }}) if you want to make
+builder]({{ '/coffee/my-first-crossword-builder/' | relative_url }}) if you want to make
 your own. Next up: a proper symmetry-aware auto-numberer and saving
 drafts to the browser instead of round-tripping JSON files by hand.
