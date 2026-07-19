@@ -12,12 +12,7 @@
     "x_rot_algo": "x*3 if (x >= 5 and y == 4) else ((y-2)*(-10))",
     "y_rot_algo": "20 if (x == 6) else 10 if (x == 5 and y == 4) else 0",
     "z_rot_algo": "-30 if (x == 6) else -20 if (x == 5 and y == 4) else 0",
-    "flange_offset": 3,
-    "flange_z": 0,
-    "plate_lip": 1.5,
-    "plate_gap": 0,
     "wall_base_z": 0,
-    "vertical_edges": false,
     "ignored_keys": [
       [
         0,
@@ -58,16 +53,9 @@
       }
     ],
     "u_diff": [],
-    "switch_profile": "asa",
     "wall_thickness": 2,
-    "skirt_flange": 1.4200000762939453,
-    "skirt_mode": "angle",
-    "skirt_angle": 30,
-    "skirt_flare": 0,
+    "skirt_flange": 2,
     "skirt": true,
-    "skirt_steps": 8,
-    "skirt_angle_end": 5,
-    "skirt_step_out": 0.5,
     "skirt_profile": [
       {
         "fraction": 0.125,
